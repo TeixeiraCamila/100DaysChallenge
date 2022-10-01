@@ -1,0 +1,77 @@
+* {
+	--background-deafult: #e56262;
+	--light-backgorund: #fff;
+	--animation-in: 0.5s ease-in 0s 1 normal forwards;
+	--animation-out: 0.5s ease-out 0s 1 normal forwards;
+}
+.frame {
+	background: var(--background-deafult);
+}
+.center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.circle {
+	border-radius: 50%;
+	box-shadow: 2px 2px 3px 2px rgb(0 0 0 / 20%);
+	position: absolute;
+	background-color: white;
+}
+.circle.big {
+	height: 90px;
+	width: 90px;
+	animation: jump-1 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+	top: 40%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+}
+.circle.medium {
+	height: 60px;
+	width: 60px;
+	animation: jump-2 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+	top: 44%;
+	left: 44%;
+	transform: translate(-50%, -50%);
+}
+
+.circle.small {
+	height: 30px;
+	width: 30px;
+	animation: jump-3 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+	top: 48%;
+	left: 48%;
+	transform: translate(-50%, -50%);
+}
+
+@keyframes jump-1 {
+	0%,
+	70% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@keyframes jump-2 {
+	0%,
+	40% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes jump-3 {
+	0%,
+	10% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
