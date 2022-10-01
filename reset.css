@@ -37,3 +37,9 @@
 	font-weight: 700;
 	user-select: none;
 }
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

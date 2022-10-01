@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+* {
+	--background-deafult: linear-gradient(to top right, #eebe6c 0%, #ca7c4e 100%);
+	--light: #fff;
+	--font-color-default: #786450;
+
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	font-family: "Nunito", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	background: var(--background-deafult);
+	color: var(--font-color-default);
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: var(--light);
+	font-weight: 700;
+	user-select: none;
+	height: 80%;
+	width: 80%;
+	display: flex;
+	justify-content: center;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.profile {
+	float: left;
+	width: 62%;
+	height: 100%;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+}
+.stats {
+	width: 38%;
+	height: 100%;
+}
+.profile .profile-image {
+	margin-bottom: 20px;
+}
+.profile .profile-image::before,
+.profile .profile-image::after {
+	content: "";
+	border-width: 1px;
+	border-style: solid;
+	margin: 0 auto;
+	position: absolute;
+	transition: all 1.5s ease-in-out;
+}
+.profile .profile-image::after {
+	border-color: transparent #786450 #786450 #786450;
+	width: 85px;
+	height: 85px;
+}
+.profile .profile-image:hover::after {
+	transform: rotate(360deg);
+}
+.profile .profile-image::before {
+	width: 77px;
+	height: 77px;
+	border-color: #786450 #786450 #786450 transparent;
+}
+.profile .profile-image:hover::before {
+	transform: rotate(-360deg);
+}
+.profile .profile-image::after,
+.profile .profile-image::before,
+.profile .profile-image,
+.profile .profile-image img {
+	border-radius: 50%;
+}
+.profile-info .name {
+	font-size: 15px;
+	font-weight: 600;
+	margin-top: 20px;
+}
+.profile-info .job {
+	font-size: 11px;
+	line-height: 15px;
+}
+.profile-buttons {
+	display: inline-grid;
+}
+.profile-buttons button {
+	width: 120px;
+	height: 30px;
+	border-radius: 15px;
+	font-size: 12px;
+	font-weight: 600;
+	margin: 10px auto 0 auto;
+	background: transparent;
+	border: 1px solid var(--font-color-default);
+	color: var(--font-color-default);
+	transition: all 0.3s ease-in-out;
+}
+.profile-buttons button:hover {
+	background-color: var(--font-color-default);
+	color: var(--light);
+}
+.stats .box {
+	height: 33%;
+	background: #f5e8df;
+	transition: all 0.3s ease-in-out;
+	flex-direction: column;
+	cursor: pointer;
+}
+.stats .box:hover {
+	background: #e1cfc2;
+}
+.stats .box span:nth-child(1) {
+	font-size: 18px;
+	font-weight: bold;
+}
+.stats .box span:nth-child(2) {
+	font-size: 12px;
+	font-weight: 300;
+}
