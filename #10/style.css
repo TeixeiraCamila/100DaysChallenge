@@ -1,0 +1,93 @@
+* {
+  --background-deafult: #4c4c4c;
+  --background-light: #fff;
+  --color-default: #fff;
+}
+
+.frame {
+  background: var(--background-deafult);
+  color: var(--color-default);
+}
+
+.watch {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: #242424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 7px solid #3a3a3a;
+}
+svg {
+  position: absolute;
+  width: 185px;
+  height: 185px;
+  border-radius: 50%;
+}
+svg circle {
+  fill: transparent;
+  width: 200px;
+  height: 200px;
+  stroke-width: 2;
+  stroke: #e01414;
+  stroke-dasharray: 625;
+  animation: spinner 6s linear infinite;
+  transform-origin: center center;
+  transform: rotate(-90deg);
+  box-shadow: 0 0 10px 0 #f6edbd;
+
+}
+@keyframes spinner {
+  0% {
+    stroke-dashoffset: 625;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50% {
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50.001% {
+    transform: rotate(-90deg) scaleY(-1);
+  }
+  100% {
+    stroke-dashoffset: 625;
+    transform: rotate(-90deg) scaleY(-1);
+  }
+}
+.data {
+  font-size: 12px;
+}
+.time {
+  font-size: 36px;
+  font-weight: bolder;
+}
+.flex-container span {
+  font-size: 10px;
+}
+.flex-container span:nth-child(1) {
+  margin-right: 15px;
+}
+.flex-container span:nth-child(1) i {
+  color: #e01414;
+  animation: heart 3s ease-in-out infinite;
+}
+@keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+}
+.dotted {
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  border: 3px dotted #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  }
