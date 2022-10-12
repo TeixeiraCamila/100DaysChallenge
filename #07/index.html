@@ -5,10 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./style.css" />
-		<script
-			src="https://kit.fontawesome.com/3bac5560ee.js"
-			crossorigin="anonymous"
-		></script>
+		<link rel="stylesheet" href="../reset.css" />
+		<script src="https://kit.fontawesome.com/3bac5560ee.js" crossorigin="anonymous"></script>
 
 		<title>#07 - Notifications, Search and Menu</title>
 	</head>
@@ -24,8 +22,48 @@
 				</ul>
 				<div class="card">
 					<div class="card-top">
-						<i id="btn-menu" class="fa-solid fa-bars"></i>
-						<span class="card-title">Notifications</span>
+						<div class="flex-container">
+							<i id="btn-menu" class="fa-solid fa-bars"></i>
+							<span class="card-title">Notifications</span>
+							<i id="btn-search" class="fa-solid fa-magnifying-glass"></i>
+						</div>
+						<div class="search-box">
+							<input type="text" name="" id="search" placeholder="Search ...">
+						</div>
+					</div>
+					<div class="card-bottom">
+						<div class="line"></div>
+						<div class="content">
+							<div class="item">
+								<div class="flex-container">
+									<i class="fa-regular fa-circle"></i>
+									<span class="box-time">9:24 AM</span>
+								</div>
+								<p>
+									<b>John Walker</b> posted a photo on your wall.
+								</p>
+							</div>
+
+							<div class="item">
+								<div class="flex-container">
+									<i class="fa-regular fa-circle"></i>
+									<span class="box-time">8:19 AM</span>
+								</div>
+								<p>
+									<b>Alice Parker</b> commented your last post.
+								</p>
+							</div>
+
+							<div class="item">
+								<div class="flex-container">
+									<i class="fa-regular fa-circle"></i>
+									<span class="box-time">8:19 AM</span>
+								</div>
+								<p>
+									<b>Luke Wayne</b> added you as friend.
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
