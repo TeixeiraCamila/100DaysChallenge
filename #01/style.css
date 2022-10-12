@@ -1,61 +1,108 @@
-.frame {
-	background-image: linear-gradient(
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+
+	--background-default: linear-gradient(
 		132.6deg,
 		rgba(71, 139, 214, 1) 23.3%,
 		rgba(37, 216, 211, 1) 84.7%
 	);
 }
-
-.numbers {
-  position: relative;
-  display: flex;
-  justify-content: center;
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	color: #333;
+	font-family: "Nunito", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
 }
 
-.numbers>div {
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+	user-select: none;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.frame {
+	background-image: var(--background-default);
+}
+
+.numbers {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.numbers > div {
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .numbers .one-1,
 .numbers .one-2 {
-  width: 20px;
-  border-radius: 4px;
+	width: 20px;
+	border-radius: 4px;
 }
 
 h1 .one-1 {
-  height: 40px;
-  transform: rotate(50deg);
-  z-index: 9;
-  position: absolute;
-  left: 0;
+	height: 40px;
+	transform: rotate(50deg);
+	z-index: 9;
+	position: absolute;
+	left: 0;
 }
 
 h1 .one-2 {
-  height: 80px;
-  z-index: 10;
+	height: 80px;
+	z-index: 10;
 }
 
 h1 .zero {
-  width: 80px;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 15px solid rgba(255, 252, 252);
-  margin-left: -10px;
+	width: 80px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 15px solid rgba(255, 252, 252);
+	margin-left: -10px;
 }
 
 h1 .zero-1 {
-  z-index: 8;
+	z-index: 8;
 }
 
 h1 .zero-2 {
-  z-index: 7;
+	z-index: 7;
 }
 
 .center h2 {
-  font-size: 4rem;
+	font-size: 4rem;
 }
 
 .center h3 {
-  font-size: 1.5rem;
+	font-size: 1.5rem;
 }

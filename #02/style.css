@@ -1,19 +1,62 @@
-*{
-  --background-deafult: #3faf82;
-	--light-backgorund: #fff;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+
+	--background-deafult: #3faf82;
+	--light-color: #fff;
 	--animation-in: 0.5s ease-in 0s 1 normal forwards;
 	--animation-out: 0.5s ease-out 0s 1 normal forwards;
 }
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	color: #333;
+	font-family: "Nunito", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--light-color);
+	text-transform: uppercase;
+	font-weight: 700;
+	user-select: none;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 .frame {
-  background: var(--background-deafult);
+	background: var(--background-deafult);
 }
 
 .line {
 	width: 200px;
 	height: 20px;
 	border-radius: 10px;
-	background-color: var(--light-backgorund);
+	background-color: var(--light-color);
 	margin-bottom: 15px;
 	cursor: pointer;
 	animation-fill-mode: forwards;
