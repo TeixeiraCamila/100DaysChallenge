@@ -5,20 +5,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="../reset.css">
   <title>#02</title>
 </head>
 <body>
   <div class="frame">
 		<div class="center">
 			<div id="burger">
-				<div class="line no-animation"></div>
-				<div class="line no-animation"></div>
-				<div class="line no-animation"></div>
+				<div class="line no-animation" id="first"></div>
+				<div class="line no-animation" id="second"></div>
+				<div class="line no-animation" id="third"></div>
 			</div>
 		</div>
 	</div>
 
-	<script src="./script.js"></script>
+	<script>
+		let btn = document.querySelector("#burger");
+let divs = document.querySelectorAll(".line");
+
+btn.addEventListener("click", () => {
+	divs.forEach((div) => {
+		div.classList.remove("no-animation");
+		div.classList.toggle("animation");
+	});
+});
+
+	</script>
 </body>
 </html>
