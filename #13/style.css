@@ -1,0 +1,76 @@
+:root {
+  --background-deafult: #ffffff;
+  --color-default: #fff;
+}
+.frame {
+  background: var(--background-deafult);
+  color: var(--color-default);
+}
+.grid-container {
+  display: grid;
+  column-gap: 6px;
+  cursor: pointer;
+  position: relative;
+  grid-template-areas:
+    'top-left top-right'
+    'bottom-left bottom-right';
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+.top-left {
+  grid-area: top-left;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.top-right {
+  grid-area: top-right;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.bottom-left {
+  grid-area: bottom-left;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.bottom-right {
+  grid-area: bottom-right;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.overlay-container .plus {
+  background: tomato;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 38%;
+  left: 38%;
+  transform: translate(-38%, -38%);
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+  transform: scale(2);
+}
+.overlay-container img {
+  z-index: 1;
+}
+.overlay-container:hover .overlay {
+  opacity: 0.5;
+  z-index: 2;
+}
+.overlay-container:hover .plus {
+  opacity: 1;
+  transform: scale(1) translate3d(0, 0, 0);;
+  z-index: 3;
+}

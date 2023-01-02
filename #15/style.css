@@ -1,0 +1,9 @@
+:root {
+  --background-deafult: #4a4740;
+  --color-default: #fff;
+  --background-secunday: #ffce4e;
+}
+.frame {
+  background: var(--background-deafult);
+  color: var(--color-default);
+}

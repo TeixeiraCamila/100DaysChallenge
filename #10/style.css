@@ -1,4 +1,4 @@
-* {
+:root {
   --background-deafult: #4c4c4c;
   --background-light: #fff;
   --color-default: #fff;
@@ -37,7 +37,6 @@ svg circle {
   transform-origin: center center;
   transform: rotate(-90deg);
   box-shadow: 0 0 10px 0 #f6edbd;
-
 }
 @keyframes spinner {
   0% {
@@ -90,4 +89,4 @@ svg circle {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  }
+}
